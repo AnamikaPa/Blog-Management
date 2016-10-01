@@ -1,0 +1,110 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#e0e0d2;
+}
+#pink{
+	background-color:red;
+	height:300px;
+	background-position: 0px -600px;
+	background-image:url("girl.jpg");
+}
+#header{
+	height:50px;
+	width:100%;
+	background-color:#3d3d29;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	z-index:10;
+}
+.logo{
+	position:absolute;
+	margin:5px;
+	height:40px;
+	width:92px;
+}
+#left{
+	margin:5px;
+	height:40px;
+	float:left;
+}
+#right{
+	margin:5px;
+	float:right;
+}
+.abc{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	padding:5px;
+	height:30px;
+	width:70px;
+}
+.abc:hover{
+	background-color:#0f0f0a;
+}
+#explore{
+	background-color:#b35900;
+	width:200px;
+	padding:5px;
+	margin:30px auto;
+	text-align:center;
+	font-size:30px;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	color:white;
+}
+#login{
+	background-color:white;
+	padding:10px 30px;
+	width:30%;
+	min-height:200px;
+	margin: 10px 10%;
+	position:absolute;
+    border-color: #ffccff;
+    border-style: solid;
+    border-width: 1px;
+}
+#login input{
+	margin-top:5px;
+	width:100%;
+	height:40px;
+	border-radius:5px;
+	border:1px solid #ffccff;
+}
+#login input:hover{
+	border-color:#ff00ff;
+}
+#login textarea{
+	margin-top:5px;
+	width:100%;
+	height:90px;
+	border-radius:5px;
+	border:1px solid #ffccff;
+}
+#login textarea:hover{
+	border-color:#ff00ff;
+}
+#block2{
+	background-color:white;
+	padding:10px 30px;
+	width:40%;
+	min-height:200px;
+	margin: 10px 50%;
+	position:absolute;
+}
+#block h2{
+	color:#b35900
+}
+#block td{
+	width:200px;
+	padding:5px;
+}
+#button{
+	background-color:#3d3d29;
+	color:white;
+	padding:7px;
+	margin: 30px 35% 10px;
+	border-radius:5px;
+}

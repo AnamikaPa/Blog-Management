@@ -1,0 +1,80 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#e0e0d2;
+}
+#pink{
+	background-color:red;
+	height:300px;
+	background-position: 0px -600px;
+	background-image:url("girl.jpg");
+}
+#header{
+	height:50px;
+	width:100%;
+	background-color:#3d3d29;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	z-index:10;
+}
+.logo{
+	position:absolute;
+	margin:5px;
+	height:40px;
+	width:92px;
+}
+#left{
+	margin:5px;
+	height:40px;
+	float:left;
+}
+#right{
+	margin:5px;
+	float:right;
+}
+.abc{
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	padding:5px;
+	height:30px;
+	width:70px;
+}
+.abc:hover{
+	background-color:#0f0f0a;
+}
+#explore{
+	background-color:#b35900;
+	width:400px;
+	padding:5px;
+	margin:50px auto;
+	text-align:center;
+	font-size:30px;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	color:white;
+}
+#block{
+	background-color:white;
+	padding:10px 30px;
+	width:60%;
+	min-height:200px;
+	margin: 50px auto;
+}
+#block table{
+	margin:auto;
+}
+#block th td{
+	font-size:20px;
+}
+#block td{
+	padding:0px 30px;
+}
+#button{
+	background-color:#3c3c2a;
+	color:white;
+	width:80px;
+	border-radius:5px;
+	height:40px;
+}
