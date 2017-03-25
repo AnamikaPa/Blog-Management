@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	session_start();	
+	echo $_SESSION['username'];
 	if(isset($_POST['done'])){
 		echo $_POST['Username'];
 		echo $_POST['Email'];
@@ -23,25 +24,24 @@
 			$abc = mysqli_query($conn,"Select * from Admin ");
 			$abc = mysqli_fetch_array($abc);
 			if($_POST['OPassword']!=''){
-			$abc = mysqli_query($conn,"Select * from Admin where BINARY PASSWORD='$_POST[OPassword]'");
-			if(mysqli_num_rows($abc)==0){
-				echo "user";
-				$_SESSION['usernam']="password";
-				echo $_SESSION['usernam'];
-				header("Location: user_info.php");
+				$abc = mysqli_query($conn,"Select * from Admin where BINARY PASSWORD='$_POST[OPassword]'");
+				if(mysqli_num_rows($abc)==0){
+					echo "user";
+					$_SESSION['usernam']="password";
+					echo $_SESSION['usernam'];
+					header("Location: user_info.php");
+				}
+				else{
+					$def = mysqli_query($conn,"UPDATE Admin set USERNAME='$_POST[Username]',EMAIL='$_POST[Email]',PASSWORD='$_POST[Password]',UPDATED_DATE=CURDATE()");
+					$_SESSION['register']="yes";
+					header("Location: user_info.php");
+				}
 			}
 			else{
-				$def = mysqli_query($conn,"UPDATE Admin set USERNAME='$_POST[Username]',EMAIL='$_POST[Email]',PASSWORD='$_POST[Password]',UPDATED_DATE=CURDATE()");
+				$def = mysqli_query($conn,"UPDATE Admin set USERNAME='$_POST[Username]',EMAIL='$_POST[Email]',UPDATED_DATE=CURDATE()");
 				$_SESSION['register']="yes";
 				header("Location: user_info.php");
 			}
-		}
-		else{
-			$def = mysqli_query($conn,"UPDATE BloggerInfo set USERNAME='$_POST[Username]',EMAIL='$_POST[Email]',UPDATED_DATE=CURDATE() ");
-			$_SESSION['username']=$_POST['Username'];
-			$_SESSION['register']="yes";
-			header("Location: user_info.php");
-		}
 		}
 		else{
 		$ab= mysqli_query($conn,"SELECT * FROM BloggerInfo WHERE BINARY USERNAME='$_SESSION[username]' ");
